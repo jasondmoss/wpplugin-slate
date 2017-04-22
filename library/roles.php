@@ -46,8 +46,7 @@ function setRoleCapabilities()
     /**
      * Administrator + Editor (Full Access).
      */
-    $admins = [ 'editor', 'administrator' ];
-    foreach ($admins as $administrator) {
+    foreach ([ 'administrator', 'editor' ] as $administrator) {
         $adm = get_role($administrator);
         $adm->add_cap('read');
         $adm->add_cap('read_customrole');
